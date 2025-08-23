@@ -1,8 +1,20 @@
-import React from 'react'
+import "./App.css"
+import ItemListContainer from "./componentes/ItemListContainer/ItemListContainer"
+import NavBar from "./componentes/NavBar/NavBar"
 
-const App = () => {
+
+const App = () => { 
+
+
+
+
   return (
-    <div>App</div>
+<>
+    <NavBar/>
+    <ItemListContainer texto="Mi Tienda De Remeras"/>
+
+
+</>
   )
 }
 

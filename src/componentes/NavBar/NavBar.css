@@ -1,0 +1,22 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+ul li{
+    display: inline-block;
+    margin: 15px;
+    list-style: none;
+    font-size: x-large;
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+    color:black
+}
+a:hover{
+    color: rgb(38, 0, 255);
+}
