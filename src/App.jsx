@@ -6,14 +6,10 @@ import NavBar from "./componentes/NavBar/NavBar"
 const App = () => { 
 
 
-
-
   return (
 <>
     <NavBar/>
-    <ItemListContainer texto="Mi Tienda De Remeras"/>
-
-
+    <ItemListContainer/>
 </>
   )
 }

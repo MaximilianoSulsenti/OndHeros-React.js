@@ -16,7 +16,7 @@ const misRemeras = [
     {id: 15, nombre: "Los Simpsons", precio: 20000, img:"../public/Ondheros-img/locagatos.jpg"},
     {id: 16, nombre: "Osito carinito", precio: 20000, img:"../public/Ondheros-img/ositocarinito.jpg"},
     {id: 17, nombre: "Punisher", precio: 20000, img:"../public/Ondheros-img/punisher.jpg"},
-    {id: 18, nombre: "Sailor Moon", precio: 20000, img:"../public/Ondheros-img/sainormoon.jpg"},
+    {id: 18, nombre: "Sailor Moon", precio: 20000, img:"../public/Ondheros-img/saynormoon.jpg"},
     {id: 19, nombre: "Sailor Moon", precio: 20000, img:"../public/Ondheros-img/saynor.jpg"},
     {id: 20, nombre: "Spiderman", precio: 20000, img:"../public/Ondheros-img/spiderman.png"},
     {id: 21, nombre: "Tom y Daly", precio: 20000, img:"../public/Ondheros-img/tomyda.jpg"},
@@ -25,6 +25,8 @@ const misRemeras = [
     {id: 24, nombre: "Wolverine", precio: 20000, img:"../public/Ondheros-img/wolvering.jpg"},
     {id: 25, nombre: "X-Men", precio: 20000, img:"../public/Ondheros-img/xmen.jpg"},
     {id: 26, nombre: "X-Men", precio: 20000, img:"../public/Ondheros-img/xmencomic.jpg"},
+    {id: 27, nombre: "Kang y Kodos", precio: 20000, img:"../public/Ondheros-img/kangykodos.jpg"},
+    {id: 28, nombre: "Troy McClure", precio: 20000, img:"../public/Ondheros-img/TroyMcClure..jpg"},
 ]
 
  export const getProductos = () => {

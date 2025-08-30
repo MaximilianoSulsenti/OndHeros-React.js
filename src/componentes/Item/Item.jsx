@@ -1,11 +1,11 @@
+import "./Item.css"
 
 const Item = ({id, nombre, precio, img}) => {
   return (
-    <div>
+    <div className="cardRemera">
         <img src={img} alt={nombre} />
         <h3>{nombre}</h3>
-        <p>Precio: ${precio}</p>
-        <p>ID: {id}</p>
+        <p><strong>${precio}</strong></p>
         <button>Ver Detalles</button>
 
     </div>

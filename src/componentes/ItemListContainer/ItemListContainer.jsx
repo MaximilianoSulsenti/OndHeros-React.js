@@ -3,7 +3,7 @@ import { getProductos } from "../../Asycmocks"
 import "./ItemListContainer.css"
 import ItemList from "../ItemList/ItemList"
 
-const ItemListContainer = ({texto}) => {
+const ItemListContainer = () => {
 
 const [productos, setProductos] = useState([])
 useEffect(() => {
@@ -16,9 +16,8 @@ useEffect(() => {
   return (
     <>
 
-   <h2 className="tituloremeras">{texto}</h2>
+   <h2 style={{textAlign:"center", fontSize:"40px"}}>Mis Remeras</h2>
    <ItemList productos={productos}/>
-
 
    </>
   )
