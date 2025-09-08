@@ -36,3 +36,12 @@ const misRemeras = [
         }, 2000)
     })
 }
+
+export const getUnProducto = (id) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            const producto = misRemeras.find(item => item.id === id)
+            resolve(producto)
+        }, 2000)
+    })
+}
