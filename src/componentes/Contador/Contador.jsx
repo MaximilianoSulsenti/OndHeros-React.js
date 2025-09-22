@@ -16,18 +16,15 @@ const ItemCount = ({inicial, stock, funcionAgregar}) => {
             setContador(contador - 1)
         }
     }
-
-    console.log(contador)
-
-  return (
-    <>
-        <div>
-            <button onClick={incrementar}> + </button>
-            <p> {contador} </p>
-            <button onClick={decrementar}> - </button>
-        </div>
-        <button onClick={()=> funcionAgregar(contador)}>Agregar al carrito</button>
-    </>
+    return (
+       <>
+           <div>
+               <button onClick={incrementar}> + </button>
+               <p> {contador} </p>
+               <button onClick={decrementar}> - </button>
+           </div>
+           <button onClick={()=> funcionAgregar(contador)}>Agregar al carrito</button>
+       </>
     )
 }
 
