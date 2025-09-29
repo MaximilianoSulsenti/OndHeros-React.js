@@ -1,3 +1,23 @@
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyB5SLBnUL3WOpTq_uifaxkoO93crwEMbLs",
+  authDomain: "ondheros.firebaseapp.com",
+  projectId: "ondheros",
+  storageBucket: "ondheros.firebasestorage.app",
+  messagingSenderId: "39374650849",
+  appId: "1:39374650849:web:f56b796b056070febd66a0"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+export const db = getFirestore(app);
+
+/////////////////// ////
+
 const misRemeras = [
     {id: 1, nombre: "Bart", precio: 20000, img:"../public/Ondheros-img/bartypayaso.jpg", categoria: "remeras", stock: 10},
     {id: 2, nombre: "Betty Boop", precio: 20000, img:"../public/Ondheros-img/betty.jpg", categoria: "remeras", stock: 10},
@@ -36,28 +56,26 @@ const misRemeras = [
     {id: 35, nombre: "Marvel", precio: 5000, img:"../public/Ondheros-img/mediasMarvel.webp", categoria: "medias", stock: 15},
 ]
 
- export const getProductos = () => {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve(misRemeras)
-        }, 100)
-    })
-}
+import { collection, doc, writeBatch } from "firebase/firestore"
 
-export const getUnProducto = (id) => {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            const producto = misRemeras.find(item => item.id === id)
-            resolve(producto)
-        }, 100)
-    })
-}
 
-export const getProductosPorCategoria = (categoriaId) => {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            const productosCategoria = misRemeras.filter(item => item.categoria === categoriaId)
-            resolve(productosCategoria)
-        }, 100)
-    })
-}
+const subirProductos = async () => {
+  const batch = writeBatch(db); // Crear un batch
+  const productosRef = collection(db, "productos"); // Referencia a la colección
+
+  // Recorre el array de productos
+  misRemeras.forEach((producto) => {
+    const nuevoDoc = doc(productosRef); // Crea un nuevo documento con un ID automático
+    batch.set(nuevoDoc, producto); // Agrega la operación de escritura al batch
+  });
+
+  // Ejecuta el batch
+  try {
+    await batch.commit();
+    console.log("Productos subidos exitosamente");
+  } catch (error) {
+    console.error("Error subiendo productos: ", error);
+  }
+};
+
+//subirProductos()

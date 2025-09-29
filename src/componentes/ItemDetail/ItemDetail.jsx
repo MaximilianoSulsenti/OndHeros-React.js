@@ -25,6 +25,7 @@ const manejadorCantidad = (cantidad) => {
       <h2>{nombre}</h2>
       <h3>Precio: {precio}</h3>
       <h4>ID: {id}</h4>
+      <h5>Stock Disponible: {stock}</h5>
       {
         cantidadAgregada > 0 ? (<Link to="/cart">Terminar Compra</Link>) : <ItemCount inicial={1} stock={stock} funcionAgregar={manejadorCantidad} />
       }
