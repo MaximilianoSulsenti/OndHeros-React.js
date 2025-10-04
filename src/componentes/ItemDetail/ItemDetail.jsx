@@ -7,7 +7,7 @@ import { useContext } from "react"
 import { toast } from "react-toastify"
 
 
-const ItemDetail = ({nombre, precio, img, stock, descripcion}) => {
+const ItemDetail = ({id,nombre, precio, img, stock, descripcion}) => {
 
 const [cantidadAgregada, setCantidadAgregada] = useState(0)
 

@@ -48,12 +48,17 @@ Proyecto de ecommerce realizado para el Curso de React.js, orientado a la venta 
 - Suscríbete a novedades desde el footer.
 
 ## Tecnologías
+
 - Vite
 - React
 - React-Router-DOM
 - Firebase Firestore
 - Bootstrap
 - React Toastify
+
+## Dominio de sitio:
+
+https://ondheros.netlify.app/
 
 ## Autor
 
