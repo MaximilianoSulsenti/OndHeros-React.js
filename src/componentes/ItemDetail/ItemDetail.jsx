@@ -4,9 +4,10 @@ import { useState} from "react"
 import { Link } from "react-router-dom"
 import { CarritoContext } from "../../Context/CarritoContext"
 import { useContext } from "react"
+import { toast } from "react-toastify"
 
 
-const ItemDetail = ({id, nombre, precio, img, stock}) => {
+const ItemDetail = ({nombre, precio, img, stock, descripcion}) => {
 
 const [cantidadAgregada, setCantidadAgregada] = useState(0)
 
@@ -17,6 +18,7 @@ const manejadorCantidad = (cantidad) => {
     
     const item = {id, nombre, precio}
     agregarAlCarrito(item, cantidad)
+    toast.success(`Se agrego correctamente al carrito ${cantidad} ${nombre}`, {position: "top-right", autoClose: 3000, theme: "dark"})
 }
 
   return (
@@ -24,8 +26,8 @@ const manejadorCantidad = (cantidad) => {
       <img src={img} alt={nombre} />
       <h2>{nombre}</h2>
       <h3>Precio: {precio}</h3>
-      <h4>ID: {id}</h4>
-      <h5>Stock Disponible: {stock}</h5>
+      <p>{descripcion}</p>
+      <h4>Stock Disponible: {stock}</h4>
       {
         cantidadAgregada > 0 ? (<Link to="/cart">Terminar Compra</Link>) : <ItemCount inicial={1} stock={stock} funcionAgregar={manejadorCantidad} />
       }

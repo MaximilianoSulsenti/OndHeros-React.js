@@ -6,6 +6,9 @@ import NavBar from "./componentes/NavBar/NavBar"
 import { CarritoProvider } from "./Context/CarritoContext"
 import Cart from "./componentes/Cart/Cart"
 import Checkout from "./componentes/Checkout/Checkout"
+import Footer from "./componentes/Footer/Footer"
+import "bootstrap/dist/css/bootstrap.min.css"
+import { ToastContainer } from "react-toastify"
 
 
 const App = () => { 
@@ -23,7 +26,9 @@ const App = () => {
       <Route path="/cart" element={<Cart/>}/>
       <Route path= "/checkout" element={<Checkout/>}/>
      </Routes>
+     <Footer/>
     </CarritoProvider>
+    <ToastContainer/>
    </BrowserRouter>
 
 </>
