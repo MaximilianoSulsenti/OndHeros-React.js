@@ -1,0 +1,97 @@
+.cart-header span{
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.cart-container {
+    width: 80%;
+    padding: 40px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color:white;
+    margin: 20px auto;
+    margin-bottom:60px;
+    margin-top: 60px;
+}
+.cart-container h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;}
+.finalizar-compra {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color:green;
+    color:white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.finalizar-compra:hover {
+   background-color: darkgreen; ;
+    color: white;
+}
+.vaciar-carrito {
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 10px;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.vaciar-carrito:hover {
+    background-color: darkred;
+    color: white;
+}
+.cart-footer{
+    text-align: right;
+    margin-top: 40px;;
+    font-weight: bold;
+    border-top: 2px solid #ccc;
+    padding-top: 10px;
+}
+.cart-footer h2 {
+    margin: 20px 0;
+    text-align: right;
+    padding-right: 10px;
+    font-size: 2rem;
+}
+.cart-footer h3 {
+    margin: 50px 0;
+    text-align: right;
+    padding-right: 10px;
+    font-size: 2.3rem;
+}
+.carrito-vacio{
+    display: flex;
+    flex-direction: column; /* coloca el h2 arriba y el link abajo */
+    align-items: center; /* centra horizontalmente */
+    justify-content: center; /* centra verticalmente si el contenedor tiene altura */
+    height: 60vh; /* opcional: para centrar verticalmente en pantalla */
+    gap: 20px; /* separación entre el título y el link */
+    text-align: center;
+}
+.sin-product{
+   font-size: 2.4rem;
+   color: #333
+}
+.ver-productos {
+  background-color:yellow;
+  color: black !important;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+.ver-productos:hover {
+  background-color: #e6e600;
+}

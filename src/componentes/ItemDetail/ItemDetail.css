@@ -1,8 +1,96 @@
 .ItemDetail{
-    display: grid;
-    padding: 2rem;
-    justify-items: center;
-    border : 2px solid black;
-    margin: 2rem;
-
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    margin: 40px;
+    text-align: center;
 }
+.detalle {
+    text-align: left;
+    margin-left: 40px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    height: auto;
+}
+.ItemDetail img {
+    width: 400px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+.ItemDetail h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color:#0d0b0b;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.ItemDetail h3 {
+    font-size: 35px;
+    color: #0d0b0b;
+    margin-bottom: 20px;
+}
+.ItemDetail p {
+    font-size: 20px;
+    color: #100f0f;
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+.terminarcompra {
+    background-color: yellow;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 3px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+}
+.terminarcompra a {
+    color: black !important;
+}
+.terminarcompra:hover {
+    background-color: #e6e600 ;
+    color: black;
+    text-decoration: none;
+}
+.seguircomprando {
+    background-color: yellow ;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 3px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+}
+.seguircomprando a {
+    color: black !important;
+}
+.seguircomprando:hover {
+    background-color: #e6e600;
+    color: black;
+    text-decoration: none;
+}
+.terminar-seguir{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+

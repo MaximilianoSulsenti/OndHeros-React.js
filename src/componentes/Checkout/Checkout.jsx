@@ -3,6 +3,7 @@ import { useState } from "react"
 import { CarritoContext } from "../../Context/CarritoContext"
 import { db } from "../../services/config"
 import { collection, addDoc, doc, getDoc, updateDoc} from "firebase/firestore"
+import "./Checkout.css"
 
 const Checkout = () => {
 
@@ -14,27 +15,21 @@ const Checkout = () => {
     const [error, setError] = useState("")
     const [ordenId, setOrdenId] = useState("")
 
-    const {carrito, vaciarCarrito, total, cantidadTotal} = useContext(CarritoContext)
+    const {carrito, vaciarCarrito, total} = useContext(CarritoContext)
 
-
-    //funciiones y validacion
 
     const manejadorFormulario = (event) => {
         event.preventDefault();
 
-        //Verificamos que los campos esten completo:
         if(!nombre || !apellido || !telefono || !email || !emailConfirmacion){
-            setError("Por favor completa todos los campos")
+            setError("Faltan completar datos")
             return
         }
 
-        //validamos que los campos de email cincida:
         if(email !== emailConfirmacion){
             setError("Los campos de email no coinciden!")
             return
         }
-
-        //1) Creamos un objeto con todos los datos de la orden de compra:
 
         const orden = {
             items: carrito.map (producto =>({
@@ -48,12 +43,7 @@ const Checkout = () => {
             apellido,
             telefono,
             email
-        }
-
-
-        //////////////////////////////
-
-    //Vamos a modificar el codigo par aque ejecute varias promesas en paralelo, por un lado que actualice el stock de productos y por el otro lado que genere ina oprden de compra. Vamos a usar Promise.All
+        };
 
     Promise.all(
       orden.items.map(async (productoOrden) => {
@@ -79,15 +69,14 @@ const Checkout = () => {
     })
     .catch((error)=>{
         console.log("No se pudo actualizar el stock", error)
-        setError("No se puede actualizar el stock, intente en el supermercado Coto")
+        setError("error en actualizacion de stock")
     })
     };
 
   return (
-    <div>
-
-<h2>Checkout:</h2>
-        <form  onSubmit={manejadorFormulario}>
+    <div className='contenedor-form' >
+     <h2>Checkout:</h2>
+        <form className='formulario' onSubmit={manejadorFormulario}>
             <div>
                 <label htmlFor="">Nombre</label>
                 <input type="text" onChange={(e)=> setNombre(e.target.value)}/>
@@ -110,15 +99,13 @@ const Checkout = () => {
             </div>
 
              {
-             error && <p style={{color:"red"}}>{error}</p>
+             error && <p className='error' style={{color:"red"}}>{error}</p>
              }
 
-            <button type="submit">Finalizar Compra</button>
+            <button className="fin-compra" type="submit">Finalizar Compra</button>
 
-             {ordenId && ( <strong> Gracias por tu compra!! Tu numero de orden es: {ordenId}</strong>)}
-
+             {ordenId && ( <strong className='strong-orden'> Gracias por su compra!! Tu numero de orden es: {ordenId}</strong>)}
        </form>
-
     </div>
   )
 }

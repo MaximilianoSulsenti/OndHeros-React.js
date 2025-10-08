@@ -1,8 +1,18 @@
 .carrito{
     font-size: 40px;
-    margin-right: 5px;
+    margin-right: 10px;
 }
 .contador{
     font-size: 30px;
-    color:white;
+    color:black;
+    background-color: yellow;
+    border-radius: 50%;
+    padding: 2px 8px;
+    position: relative;
+}
+.cartwidget{
+    margin-right: 40px;
+}
+.contenedorcarrito{
+    background-color: black;
 }

@@ -1,0 +1,96 @@
+.contenedor-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f6fa;
+  min-height: 100vh;
+}
+
+.contenedor-form h2 {
+  font-size: 35px;
+  color: #333;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: underline;
+}
+
+.formulario {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 40px 50px;
+  width: 600px;
+  transition: width 0.3s ease
+}
+
+.formulario div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.formilario div label {
+  font-weight: bold;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #555;
+}
+
+.formulario div input[type="text"] {
+  padding: 10px 12px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+  font-size: 15px;
+}
+.formulario div input[type="email"] {
+  padding: 10px 12px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+  font-size: 15px;
+}
+.formulario div input:focus {
+  border-color: black;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+}
+
+.error {
+  color: #e74c3c;
+  font-weight: 600;
+  text-align: center;
+}
+
+.fin-compra {
+  background-color: green;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s ease, transform 0.1s;
+}
+
+.fin-compra:hover {
+  background-color: darkgreen;
+}
+
+.fin-compra:active {
+  transform: scale(0.98);
+}
+
+.strong-orden {
+  display: block;
+  margin-top: 20px;
+  color:#0a0808;
+  font-size: 16px;
+  text-align: center;
+}

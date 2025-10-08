@@ -35,8 +35,6 @@ const ItemListContainer = () => {
 
   return (
     <>
-
-   <h2 style={{textAlign:"center", fontSize:"40px"}}>Mis Remeras</h2>
     { loading ? <Loader/> : <ItemList productos={productos}/>}
     
    </>

@@ -1,0 +1,42 @@
+.cart-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr auto;
+  justify-items: center;
+  align-items: center;
+  font-size: 1.3rem;
+  text-align: center;
+  border-bottom: 2px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.cart-item {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr auto;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  font-size: 1.3rem;
+}
+.nombre {
+  margin:auto;
+  text-align: left;
+  padding-left: 10px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+}
+.boton-eliminar {
+  background: none;
+  border: none;
+  color: red;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.boton-eliminar :hover {
+  color: darkred;
+}

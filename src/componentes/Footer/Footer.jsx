@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { db } from "../../services/config";
 import { collection, addDoc } from "firebase/firestore";
+import "./Footer.css"
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -18,17 +19,11 @@ const Footer = () => {
   };
 
   return (
-    <footer style={{
-      background: "#222",
-      color: "#fff",
-      textAlign: "center",
-      padding: "30px 0",
-      marginTop: "40px"
-    }}>
-      <div>
+    <footer>
+      <div className="footer-content">
         <p>© {new Date().getFullYear()} OndHeros - Todos los derechos reservados</p>
-        <p>Contacto: ondheros@gmail.com | Tel: 123-456-789</p>
-        <div style={{margin: "15px 0"}}>
+        <p>Contacto: "ondheros@gmail.com"| Tel: 123-456-789</p>
+        <div className="suscribir-footer">
           <form onSubmit={handleSubmit}>
             <label>
               Suscríbete a novedades:
@@ -45,7 +40,7 @@ const Footer = () => {
           </form>
           {mensaje && <p style={{color: "#0f0", marginTop: "10px"}}>{mensaje}</p>}
         </div>
-        <div>
+        <div className="redes-footer">
           <a href="https://instagram.com/ondheros" target="_blank" rel="noopener noreferrer" style={{color: "#fff", margin: "0 10px"}}>Instagram</a>
           <a href="https://facebook.com/ondheros" target="_blank" rel="noopener noreferrer" style={{color: "#fff", margin: "0 10px"}}>Facebook</a>
         </div>

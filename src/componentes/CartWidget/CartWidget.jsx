@@ -8,12 +8,14 @@ const CartWidget = () => {
   const {cantidadTotal} = useContext(CarritoContext)
 
   return (
-    <div>
-      <Link to="/cart"> 
+    <div className="contenedorcarrito">
+      <Link to="/cart" className="cartwidget">
+         <> 
             <span className="carrito">🛒</span>
              {
               cantidadTotal > 0 && <strong className="contador">{cantidadTotal}</strong>
-             }       
+             }   
+         </>    
       </Link>
     </div>
   )

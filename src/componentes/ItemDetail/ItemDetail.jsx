@@ -23,14 +23,24 @@ const manejadorCantidad = (cantidad) => {
 
   return (
     <div className="ItemDetail">
+      <div>
       <img src={img} alt={nombre} />
+      </div>
+      <div className="detalle">
       <h2>{nombre}</h2>
-      <h3>Precio: {precio}</h3>
       <p>{descripcion}</p>
-      <h4>Stock Disponible: {stock}</h4>
+      <h3>${precio}</h3>
+      <h4>Stock: {stock}</h4>
       {
-        cantidadAgregada > 0 ? (<Link to="/cart">Terminar Compra</Link>) : <ItemCount inicial={1} stock={stock} funcionAgregar={manejadorCantidad} />
+        cantidadAgregada > 0 ? (
+        <div className="terminar-seguir">
+        <button className="terminarcompra"><Link to="/cart">Terminar Compra</Link></button>
+        <button className="seguircomprando"><Link to="/">Seguir Comprando</Link></button>
+        </div>
+        )
+         : <ItemCount inicial={1} stock={stock} funcionAgregar={manejadorCantidad} />
       }
+      </div>
     </div>
   )
 }
