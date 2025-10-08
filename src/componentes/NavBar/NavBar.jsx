@@ -4,11 +4,10 @@ import { Link} from "react-router-dom"
 
 const NavBar = () => {
 
-
   return (
      <header>
       <Link to="/">
-        <img className="logo" src="../public/Ondheros-img/ondheroslogo.jpg" alt="Logo de la tienda" />
+        <img className="logo" src="/Ondheros-img/ondheroslogo.jpg" alt="Logo de la tienda" />
       </Link>
         <nav>
           <ul>
