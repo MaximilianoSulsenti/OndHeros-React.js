@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Toast, ToastContainer } from "react-bootstrap";
+import { Toast } from "react-bootstrap";
 import "./Contador.css";
 
 const ItemCount = ({ inicial, stock, funcionAgregar, talles = [] }) => {
