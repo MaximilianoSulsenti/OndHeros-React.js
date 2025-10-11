@@ -48,3 +48,30 @@
     text-decoration: none;
     font-weight: bold;
 }
+
+/* responsive mobile*/
+@media (max-width: 768px) {
+  .contadores {
+    flex-direction: row;
+    gap: 15px;
+    width: 100%;
+    max-width: 250px;
+    margin: auto;
+    padding: 10px;
+  }
+
+  .contadores button {
+    font-size: 22px;
+    padding: 8px 15px;
+  }
+
+  .contadores p {
+    font-size: 22px;
+  }
+
+  .agregarCarrito {
+    width: 100%; 
+    padding: 14px;
+    font-size: 18px;
+  }
+}

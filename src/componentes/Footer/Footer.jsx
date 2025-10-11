@@ -25,8 +25,8 @@ const Footer = () => {
         <p>Contacto: "ondheros@gmail.com"| Tel: 123-456-789</p>
         <div className="suscribir-footer">
           <form onSubmit={handleSubmit}>
-            <label>
-              Suscríbete a novedades:
+            <label className="label">
+              <p>Suscríbete a novedades:</p>
               <input
                 type="email"
                 value={email}
@@ -36,7 +36,7 @@ const Footer = () => {
                 style={{marginLeft: "10px", padding: "5px"}}
               />
             </label>
-            <button type="submit" style={{marginLeft: "10px", padding: "5px 15px"}}>Suscribirse</button>
+            <button className="suscribirse" type="submit" style={{marginLeft: "10px", padding: "5px 15px"}}>Suscribirse</button>
           </form>
           {mensaje && <p style={{color: "#0f0", marginTop: "10px"}}>{mensaje}</p>}
         </div>

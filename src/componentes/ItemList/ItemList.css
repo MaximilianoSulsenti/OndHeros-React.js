@@ -5,3 +5,17 @@
     padding: 2rem;
     justify-items: center;
 }
+
+/* responsive Mobile horizontal o pantallas chicas */
+@media (max-width: 768px) {
+  .contenedorRemeras {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* responsive mobile*/
+@media (max-width: 480px) {
+  .contenedorRemeras {
+    grid-template-columns: 1fr; 
+  }
+}

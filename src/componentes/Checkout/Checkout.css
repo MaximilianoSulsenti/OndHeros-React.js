@@ -94,3 +94,43 @@
   font-size: 16px;
   text-align: center;
 }
+
+/*resposive para mobile*/
+
+@media (max-width: 768px) {
+  .contenedor-form {
+    padding: 20px 10px;
+    min-height: auto; 
+  }
+
+  .contenedor-form h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .formulario {
+    width: 100%; 
+    padding: 20px 25px; 
+  }
+
+  .formulario div {
+    margin-bottom: 18px;
+  }
+
+  .formulario div input[type="text"],
+  .formulario div input[type="email"] {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .fin-compra {
+    font-size: 15px;
+    padding: 10px 15px;
+  }
+
+  .strong-orden {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+}
+

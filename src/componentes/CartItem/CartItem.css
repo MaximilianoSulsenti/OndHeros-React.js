@@ -40,3 +40,37 @@
 .boton-eliminar :hover {
   color: darkred;
 }
+
+
+/* responsive para mobile */
+@media (max-width: 768px) {
+  .cart-header {
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .cart-item {
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    padding: 15px;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .nombre {
+    text-align: center;
+    padding-left: 0;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .boton-eliminar {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+
+  .cart-item > * {
+    margin-bottom: 8px;
+  }
+}
+
