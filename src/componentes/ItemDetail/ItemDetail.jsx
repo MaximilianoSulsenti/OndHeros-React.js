@@ -15,7 +15,7 @@ const ItemDetail = ({ id, nombre, precio, img, stock, descripcion, categoria}) =
       setCantidadAgregada(cantidad)
 
       const item = { id, nombre, precio, talla }
-      agregarAlCarrito(item, cantidad)
+      agregarAlCarrito(item, cantidad, talla)
 
       toast.success(`Se agregó ${cantidad} ${nombre} - Talle ${talla}`, {
         position: "top-right",
@@ -44,10 +44,11 @@ const ItemDetail = ({ id, nombre, precio, img, stock, descripcion, categoria}) =
           </div>
         ) : 
           <ItemCount
-            inicial={1}
-            stock={stock}
-            funcionAgregar={manejadorCantidad}
-            talles={tallesDisponibles}
+              inicial={1}
+              stock={stock}
+              funcionAgregar={manejadorCantidad}
+              talles={tallesDisponibles}
+
           />
         }
       </div>

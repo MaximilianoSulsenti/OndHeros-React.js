@@ -35,7 +35,8 @@ const Checkout = () => {
             items: carrito.map (producto =>({
                 id: producto.item.id,
                 nombre: producto.item.nombre,
-                cantidad: producto.cantidad
+                cantidad: producto.cantidad,
+                talla: producto.talla,
             })),
             total: total,
             fecha: new Date(),
