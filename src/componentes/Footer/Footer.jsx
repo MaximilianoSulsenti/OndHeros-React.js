@@ -28,11 +28,7 @@ const Footer = () => {
             <label className="label">
               <p>Suscríbete a novedades:</p>
               <input
-                type="email"
-                value={email}
-                onChange={e => setEmail(e.target.value)}
-                placeholder="Tu email"
-                required
+                type="email" value={email}  onChange={e => setEmail(e.target.value)} placeholder="Tu email" required
                 style={{marginLeft: "10px", padding: "5px"}}
               />
             </label>
