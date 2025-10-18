@@ -103,7 +103,9 @@
     padding: 20px;
     margin: 20px auto;
   }
-
+  .sinimg {
+    display: none;
+  }
   .cart-container h1 {
     font-size: 2rem;
     margin-bottom: 20px;

@@ -21,6 +21,7 @@ const Cart = () => {
     <div className="cart-container">
         <h1>Resumen del Carrito</h1>
            <div className="cart-header">
+             <span className="sinimg"></span>
              <span>Producto</span>
              <span>Cantidad</span>
              <span>Precio</span>

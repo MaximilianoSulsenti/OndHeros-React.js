@@ -14,7 +14,7 @@ const ItemDetail = ({ id, nombre, precio, img, stock, descripcion, categoria}) =
   const manejadorCantidad = (cantidad, talla) => {
       setCantidadAgregada(cantidad)
 
-      const item = { id, nombre, precio, talla }
+      const item = { id, nombre, precio, talla, img }
       agregarAlCarrito(item, cantidad, talla)
 
       toast.success(`Se agregó ${cantidad} ${nombre} - Talle ${talla}`, {
